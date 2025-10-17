@@ -21,7 +21,7 @@ function App() {
     window.onSpotifyIframeApiReady = (IFrameAPI) => {
         const element = document.getElementById("embed-iframe");
         const options = {
-            uri: "spotify:playlist:5c2T6bsVOT5gjC9o38GShx",
+            uri: "spotify:track:4d0DpU7Odiv0ztvX2GxJlk",
             width: "640",
             height: "160",
         };
@@ -34,7 +34,7 @@ function App() {
     return (
         <>
             <div className="App">
-                <BrowserRouter basename="/six-years">
+                <BrowserRouter basename="/ju-dudu">
                     <div id="embed-iframe"></div>
 
                     <Navbar />

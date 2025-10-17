@@ -11,8 +11,8 @@ import { useEffect, useRef } from 'react';
 import { InView } from 'react-intersection-observer';
 
 const Album = () => {
-    const imageCount = 48;
-    const images = Array.from({ length: imageCount }, (_, i) => `Foto${String(imageCount - i).padStart(2, '0')}.jpg`);
+    const imageCount = 46;
+    const images = Array.from({ length: imageCount }, (_, i) => `Foto ${String(imageCount - i).padStart(2, '0')}.jpg`);
 
     const videoRef = useRef(null);
 
@@ -33,29 +33,25 @@ const Album = () => {
                 <p className="subText">Os momentos ao seu lado sempre são especiais. Eles me trazem felicidade, tranquilidade e proteção. Sem eles eu não seria o que sou hoje, porque eles me transformaram. Por isso, aqui estão apenas alguns dos todos os belíssimos momentos que compartilhamos juntos.</p>
 
                 <div className="albumContent">
-                    <div className="albumVideo">
+                    {/* <div className="albumVideo">
                         <video ref={videoRef} autoPlay loop muted playsInline>
-                            <source src="/six-years/static/video.mp4" />
+                            <source src="/ju-dudu/static/video.mp4" />
                         </video>
-                    </div>
+                    </div> */}
 
                     <div className="albumImages">
                         {images.map((src, index) => (
                             <InView key={index} triggerOnce={true} trackVisibility={true} delay={250}>
                                 {({ inView, ref }) => (
-                                    <img className={`fade-in-image ${inView ? "visible" : "hidden"}`} src={`/six-years/static/${src}`} alt={`Foto ${imageCount - index}`} ref={ref}/>
+                                    <img className={`fade-in-image ${inView ? "visible" : "hidden"}`} src={`/ju-dudu/static/${src}`} alt={`Foto ${imageCount - index}`} ref={ref}/>
                                 )}
                             </InView>
-
-                            /* {/* <img key={index} src={src} alt={`Foto ${imageCount - index}`} /> */
                         ))}
                     </div>
                 </div>
 
                 <div className="final">
                     <p className="loveu">Eu te amo! <span>&#10084;</span></p>
-
-                    <p className="author">Do seu desenvolvedor favorito: <span>Gustavo</span> ;)</p>
                 </div>
             </div>
         </>

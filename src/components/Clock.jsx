@@ -16,7 +16,7 @@ const Clock = () => {
 
     useEffect(() => {
         const calculateTimeDiff = () => {
-            const startDate = new Date(2019, 3, 29, 0, 0, 0); // 29/04/2019
+            const startDate = new Date(2023, 11, 10, 0, 0, 0); // 29/04/2019
             const now = new Date();
 
             let years = now.getFullYear() - startDate.getFullYear();
@@ -63,7 +63,7 @@ const Clock = () => {
     return (
         <>
             <div className="Clock">
-                <p>Desde 29 de Abril de 2019:</p>
+                <p>Desde 10 de Dezembro de 2023:</p>
         
                 <table>
                     <thead>

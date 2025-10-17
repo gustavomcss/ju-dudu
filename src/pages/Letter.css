@@ -67,13 +67,3 @@ div.Letter > div.final > p.author {
 div.Letter > div.final > p.author > span {
     color: #FFFFFF;
 }
-
-
-
-/* Media-Query Screen DESKTOP AND BIGGERS */
-
-@media (min-width: 992px) {
-    div.Letter > div.letterContent {
-        font-size: 16px;
-    }
-}
